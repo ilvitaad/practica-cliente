@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #f4f8f5;
+    font-family: Arial, sans-serif;
+    color: #26332c;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    color: #26819c;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+
+.btn {
+    padding: 9px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-nuevo,
+.btn-guardar {
+    background-color: #26819c;
+    color: white;
+}
+
+.btn-nuevo:hover,
+.btn-guardar:hover {
+    background-color: #26819c;
+}
+
+.btn-editar {
+    background-color: #ddf4e8;
+    color: #247a52;
+}
+
+.btn-eliminar {
+    background-color: #ec736f;
+    color: white;
+}
+
+/* Tabla */
+
+.tabla-contenedor {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #26819c;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.acciones form {
+    margin: 0;
+}
+
+/* Formulario */
+
+.formulario {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.botones-formulario {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}

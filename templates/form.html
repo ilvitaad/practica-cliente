@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% if cliente %}
+            Editar Cliente
+        {% else %}
+            Nuevo Cliente
+        {% endif %}
+    </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }} ">
+</head>
+
+<body>
+
+    <div class="contenedor formulario-contenedor">
+
+        <div class="encabezado-formulario">
+
+            <div>
+                <h1>
+                    {% if cliente %}
+                        Editar Cliente
+                    {% else %}
+                        Nuevo Cliente
+                    {% endif %}
+                </h1>
+
+                <p>
+                    {% if cliente %}
+                        Modifica la información del cliente.
+                    {% else %}
+                        Ingresa los datos del nuevo cliente.
+                    {% endif %}
+                </p>
+            </div>
+
+            <a href="{{ url_for('index') }}" class="btn btn-regresar"> Regresar </a>
+
+        </div>
+
+        <div class="formulario">
+
+            <form method="POST">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        value="{{ cliente.nombre if cliente else '' }}"
+                        placeholder="Ingrese el nombre"
+                        required >
+                </div>
+
+                <div class="campo">
+                    <label for="dpi">DPI</label>
+
+                    <input
+                        type="text"
+                        id="dpi"
+                        name="dpi"
+                        value="{{ cliente.dpi if cliente else '' }}"
+                        placeholder="Ingrese el DPI" >
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+
+                    <input
+                        type="text"
+                        id="telefono"
+                        name="telefono"
+                        value="{{ cliente.telefono if cliente else '' }}"
+                        placeholder="Ingrese el teléfono" >
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        value="{{ cliente.correo if cliente else '' }}"
+                        placeholder="Ingrese el correo" >
+                </div>
+
+                <div class="campo">
+                    <label for="direccion">Dirección</label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        value="{{ cliente.direccion if cliente else '' }}"
+                        placeholder="Ingrese la dirección" >
+                </div>
+
+                <div class="botones-formulario">
+
+                    <a href="{{ url_for('index') }}" class="btn btn-regresar"> Cancelar </a>
+
+                    <button type="submit" class="btn btn-guardar" >
+                        {% if cliente %}
+                            Actualizar Cliente
+                        {% else %}
+                            Guardar Cliente
+                        {% endif %}
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
